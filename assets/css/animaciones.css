@@ -1,0 +1,368 @@
+/* VIGO | Animación: Renovación de interiores */
+
+.landing-card--renovacion {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease,
+    transform 0.45s ease;
+}
+
+.landing-card--renovacion:hover {
+  background-color: #202020;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.renovacion-visual {
+  margin: 16px 0 20px;
+  max-width: 200px;
+}
+
+.renovacion-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.renovacion-base,
+.renovacion-nuevo {
+  stroke: #858585;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.4s ease;
+}
+
+.renovacion-base {
+  opacity: 0.65;
+  transition:
+    opacity 0.45s ease,
+    stroke 0.45s ease;
+}
+
+.renovacion-nuevo {
+  stroke-dasharray: 350;
+  stroke-dashoffset: 350;
+  transition:
+    stroke-dashoffset 1.2s ease,
+    stroke 0.4s ease;
+}
+
+.landing-card--renovacion:hover .renovacion-base {
+  opacity: 0.25;
+  stroke: #fff;
+}
+
+.landing-card--renovacion:hover .renovacion-nuevo {
+  stroke: #fff;
+  stroke-dashoffset: 0;
+}
+
+.renovacion-etiqueta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #888;
+}
+
+.renovacion-etiqueta span:last-child {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.landing-card--renovacion:hover
+.renovacion-etiqueta span:last-child {
+  opacity: 1;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-card--renovacion,
+  .renovacion-base,
+  .renovacion-nuevo,
+  .renovacion-etiqueta span {
+    transition: none;
+  }
+}
+
+
+/* VIGO | Animación: Adecuaciones de espacios */
+
+.landing-card--adecuaciones {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease,
+    transform 0.45s ease;
+}
+
+.landing-card--adecuaciones:hover {
+  background-color: #202020;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.adecuaciones-visual {
+  margin: 16px 0 20px;
+  max-width: 200px;
+}
+
+.adecuaciones-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.adecuaciones-estructura,
+.adecuaciones-muro,
+.adecuaciones-nueva,
+.adecuaciones-detalles {
+  fill: none;
+  stroke: #858585;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.adecuaciones-estructura,
+.adecuaciones-detalles {
+  transition: stroke 0.45s ease;
+}
+
+/* El muro original se desplaza */
+.adecuaciones-muro {
+  transition:
+    transform 0.9s ease,
+    opacity 0.6s ease,
+    stroke 0.45s ease;
+}
+
+/* La nueva distribución comienza oculta */
+.adecuaciones-nueva {
+  stroke-dasharray: 250;
+  stroke-dashoffset: 250;
+  transition:
+    stroke-dashoffset 1.2s ease 0.2s,
+    stroke 0.45s ease;
+}
+
+.landing-card--adecuaciones:hover
+.adecuaciones-muro {
+  transform: translateX(-35px);
+  opacity: 0;
+  stroke: #fff;
+}
+
+.landing-card--adecuaciones:hover
+.adecuaciones-nueva {
+  stroke-dashoffset: 0;
+  stroke: #fff;
+}
+
+.landing-card--adecuaciones:hover
+.adecuaciones-estructura,
+.landing-card--adecuaciones:hover
+.adecuaciones-detalles {
+  stroke: #fff;
+}
+
+.adecuaciones-etiqueta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #888;
+}
+
+.adecuaciones-etiqueta span:last-child {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.landing-card--adecuaciones:hover
+.adecuaciones-etiqueta span:last-child {
+  opacity: 1;
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .landing-card--adecuaciones,
+  .adecuaciones-estructura,
+  .adecuaciones-muro,
+  .adecuaciones-nueva,
+  .adecuaciones-detalles,
+  .adecuaciones-etiqueta span {
+    transition: none;
+  }
+}
+
+
+/* VIGO | Animación: Mejoras integrales */
+
+.landing-card--integrales {
+  position: relative;
+  overflow: hidden;
+  transition:
+    background-color 0.45s ease,
+    color 0.45s ease,
+    transform 0.45s ease;
+}
+
+.landing-card--integrales:hover {
+  background-color: #202020;
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.integrales-visual {
+  margin: 16px 0 20px;
+  max-width: 200px;
+}
+
+.integrales-visual svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.integrales-estructura,
+.integrales-muros,
+.integrales-acabados {
+  fill: none;
+  stroke: #858585;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* Etapa 1: estructura visible inicialmente */
+.integrales-estructura {
+  opacity: 0.65;
+  transition:
+    stroke 0.4s ease,
+    opacity 0.4s ease;
+}
+
+/* Etapa 2: muros ocultos */
+.integrales-muros {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition:
+    stroke-dashoffset 0.9s ease 0.25s,
+    stroke 0.4s ease;
+}
+
+/* Etapa 3: acabados ocultos */
+.integrales-acabados {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  transition:
+    stroke-dashoffset 0.9s ease 0.85s,
+    stroke 0.4s ease;
+}
+
+/* Activar las tres etapas */
+.landing-card--integrales:hover
+.integrales-estructura {
+  stroke: #fff;
+  opacity: 1;
+}
+
+.landing-card--integrales:hover
+.integrales-muros {
+  stroke: #fff;
+  stroke-dashoffset: 0;
+}
+
+.landing-card--integrales:hover
+.integrales-acabados {
+  stroke: #fff;
+  stroke-dashoffset: 0;
+}
+
+/* Indicadores de las etapas */
+
+.integrales-etiqueta {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  color: #888;
+}
+
+.integrales-etiqueta span {
+  transition:
+    color 0.4s ease,
+    opacity 0.4s ease;
+}
+
+.landing-card--integrales:hover
+.integrales-etiqueta span:first-child {
+  color: #fff;
+}
+
+.landing-card--integrales:hover
+.integrales-etiqueta span:nth-child(2) {
+  color: #fff;
+  transition-delay: 0.25s;
+}
+
+.landing-card--integrales:hover
+.integrales-etiqueta span:last-child {
+  color: #fff;
+  transition-delay: 0.85s;
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+  .landing-card--integrales,
+  .integrales-estructura,
+  .integrales-muros,
+  .integrales-acabados,
+  .integrales-etiqueta span {
+    transition: none;
+  }
+}
+
+/* VIGO | Sistema centralizado de animaciones SVG para servicios */
+.landing-card--animated{position:relative;overflow:hidden;cursor:pointer;transition:background-color .45s,color .45s,transform .45s}
+.landing-card--animated:is(:hover,.is-active){background:#202020;color:#fff;transform:translateY(-5px)}
+.landing-card--animated:is(:hover,.is-active) p{color:#d1d1d1}
+.service-visual{margin:16px 0 20px;max-width:200px}
+.service-visual svg{display:block;width:100%;height:auto;overflow:visible}
+.service-stage{fill:none;stroke:#858585;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.service-stage--base{opacity:.65;transition:stroke .4s,opacity .4s}
+.service-stage--middle,.service-stage--final{stroke-dasharray:600;stroke-dashoffset:600;transition:stroke-dashoffset .9s ease,stroke .4s}
+.service-stage--final{transition-delay:.65s,0s}
+.landing-card--animated:is(:hover,.is-active) .service-stage--base{stroke:#fff;opacity:1}
+.landing-card--animated:is(:hover,.is-active) .service-stage--middle,.landing-card--animated:is(:hover,.is-active) .service-stage--final{stroke:#fff;stroke-dashoffset:0}
+.service-visual-labels{display:flex;justify-content:space-between;gap:5px;color:#858585;font-size:9px;font-weight:700;letter-spacing:.55px}
+.service-visual-labels span{transition:color .4s,opacity .4s}
+.service-visual-labels span:nth-child(n+2){opacity:.45}
+.landing-card--animated:is(:hover,.is-active) .service-visual-labels span{color:#fff;opacity:1}
+.landing-card--animated:is(:hover,.is-active) .service-visual-labels span:nth-child(2){transition-delay:.25s}
+.landing-card--animated:is(:hover,.is-active) .service-visual-labels span:nth-child(3){transition-delay:.8s}
+/* En las tres tarjetas originales, el toque activa los mismos estados que hover. */
+.landing-card--renovacion.is-active,.landing-card--adecuaciones.is-active,.landing-card--integrales.is-active{background-color:#202020;color:#fff;transform:translateY(-5px)}
+.landing-card--renovacion.is-active .renovacion-base{opacity:.25;stroke:#fff}
+.landing-card--renovacion.is-active .renovacion-nuevo{stroke:#fff;stroke-dashoffset:0}
+.landing-card--renovacion.is-active .renovacion-etiqueta span:last-child{opacity:1;color:#fff}
+.landing-card--adecuaciones.is-active .adecuaciones-muro{transform:translateX(-35px);opacity:0;stroke:#fff}
+.landing-card--adecuaciones.is-active .adecuaciones-nueva{stroke-dashoffset:0;stroke:#fff}
+.landing-card--adecuaciones.is-active .adecuaciones-estructura,.landing-card--adecuaciones.is-active .adecuaciones-detalles{stroke:#fff}
+.landing-card--adecuaciones.is-active .adecuaciones-etiqueta span:last-child{opacity:1;color:#fff}
+.landing-card--integrales.is-active .integrales-estructura{stroke:#fff;opacity:1}
+.landing-card--integrales.is-active .integrales-muros,.landing-card--integrales.is-active .integrales-acabados{stroke:#fff;stroke-dashoffset:0}
+.landing-card--integrales.is-active .integrales-etiqueta span{color:#fff}
+.landing-card--renovacion.is-active p,.landing-card--adecuaciones.is-active p,.landing-card--integrales.is-active p{color:#d1d1d1}
+.landing-card--animated:focus-visible,.landing-card--renovacion:focus-visible,.landing-card--adecuaciones:focus-visible,.landing-card--integrales:focus-visible{outline:2px solid #777;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.landing-card--animated,.service-stage,.service-visual-labels span{transition:none!important}.service-stage--middle,.service-stage--final{stroke-dashoffset:0}}

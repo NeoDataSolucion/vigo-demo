@@ -1,0 +1,19 @@
+/* VIGO: contraste editorial oscuro para las landings 04-06 */
+.landing-page--dark .landing-hero{background:#191b1d;color:#f8f8f7}
+.landing-page--dark .landing-hero h1{color:#fff}
+.landing-page--dark .landing-hero h1 em{color:#a8b3ba}
+.landing-page--dark .landing-hero-copy>p{color:#d3d7da}
+.landing-page--dark .landing-hero .section-kicker{color:#b5c0c8}
+.landing-page--dark .landing-hero .landing-location{color:#aab4ba}
+.landing-page--dark .landing-hero .landing-secondary{color:#f7f7f7}
+.landing-page--dark .landing-hero .btn-primary{background:#fff;color:#1a1c1e;border-color:#fff}
+.landing-page--dark .landing-hero .btn-primary:hover{background:#dfe4e7;border-color:#dfe4e7}
+.landing-page--dark .landing-band{background:#111315}
+.landing-page--dark .landing-cta{background:#24282b;color:#fff}
+.landing-page--dark .landing-cta h2{color:#fff}
+.landing-page--dark .landing-cta p{color:#d4dadd}
+.landing-page--dark .landing-cta .section-kicker{color:#b8c3ca}
+.landing-page--dark .landing-cta .landing-secondary{color:#fff}
+.landing-page--dark .landing-cta .btn-primary{background:#fff;color:#191b1d;border-color:#fff}
+.landing-page--dark .landing-cta .btn-primary:hover{background:#dfe4e7;border-color:#dfe4e7}
+.landing-page--dark .landing-card{background:#f0f1f0}
